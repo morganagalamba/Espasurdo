@@ -15,10 +15,11 @@
 		D7DD24C624F971BB00BF5E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DD24C424F971BB00BF5E3D /* Main.storyboard */; };
 		D7DD24C824F971BC00BF5E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DD24C724F971BC00BF5E3D /* Assets.xcassets */; };
 		D7DD24CB24F971BC00BF5E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DD24C924F971BC00BF5E3D /* LaunchScreen.storyboard */; };
+		D7DD24D324F9809100BF5E3D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD24D224F9809100BF5E3D /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D7DD24B724F971BB00BF5E3D /* labritinto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = labritinto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DD24B724F971BB00BF5E3D /* Espasurdo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Espasurdo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DD24BA24F971BB00BF5E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7DD24BC24F971BB00BF5E3D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		D7DD24BE24F971BB00BF5E3D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 		D7DD24C724F971BC00BF5E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7DD24CA24F971BC00BF5E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7DD24CC24F971BC00BF5E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7DD24D224F9809100BF5E3D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +46,7 @@
 		D7DD24AE24F971BB00BF5E3D = {
 			isa = PBXGroup;
 			children = (
-				D7DD24B924F971BB00BF5E3D /* labritinto */,
+				D7DD24B924F971BB00BF5E3D /* Espasurdo */,
 				D7DD24B824F971BB00BF5E3D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +54,12 @@
 		D7DD24B824F971BB00BF5E3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7DD24B724F971BB00BF5E3D /* labritinto.app */,
+				D7DD24B724F971BB00BF5E3D /* Espasurdo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D7DD24B924F971BB00BF5E3D /* labritinto */ = {
+		D7DD24B924F971BB00BF5E3D /* Espasurdo */ = {
 			isa = PBXGroup;
 			children = (
 				D7DD24BA24F971BB00BF5E3D /* AppDelegate.swift */,
@@ -65,20 +67,21 @@
 				D7DD24BE24F971BB00BF5E3D /* Actions.sks */,
 				D7DD24C024F971BB00BF5E3D /* GameScene.swift */,
 				D7DD24C224F971BB00BF5E3D /* GameViewController.swift */,
+				D7DD24D224F9809100BF5E3D /* FirstViewController.swift */,
 				D7DD24C424F971BB00BF5E3D /* Main.storyboard */,
 				D7DD24C724F971BC00BF5E3D /* Assets.xcassets */,
 				D7DD24C924F971BC00BF5E3D /* LaunchScreen.storyboard */,
 				D7DD24CC24F971BC00BF5E3D /* Info.plist */,
 			);
-			path = labritinto;
+			path = Espasurdo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D7DD24B624F971BB00BF5E3D /* labritinto */ = {
+		D7DD24B624F971BB00BF5E3D /* Espasurdo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7DD24CF24F971BC00BF5E3D /* Build configuration list for PBXNativeTarget "labritinto" */;
+			buildConfigurationList = D7DD24CF24F971BC00BF5E3D /* Build configuration list for PBXNativeTarget "Espasurdo" */;
 			buildPhases = (
 				D7DD24B324F971BB00BF5E3D /* Sources */,
 				D7DD24B424F971BB00BF5E3D /* Frameworks */,
@@ -88,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = labritinto;
+			name = Espasurdo;
 			productName = labritinto;
-			productReference = D7DD24B724F971BB00BF5E3D /* labritinto.app */;
+			productReference = D7DD24B724F971BB00BF5E3D /* Espasurdo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D7DD24B224F971BB00BF5E3D /* Build configuration list for PBXProject "labritinto" */;
+			buildConfigurationList = D7DD24B224F971BB00BF5E3D /* Build configuration list for PBXProject "Espasurdo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D7DD24B624F971BB00BF5E3D /* labritinto */,
+				D7DD24B624F971BB00BF5E3D /* Espasurdo */,
 			);
 		};
 /* End PBXProject section */
@@ -149,6 +152,7 @@
 				D7DD24C124F971BB00BF5E3D /* GameScene.swift in Sources */,
 				D7DD24C324F971BB00BF5E3D /* GameViewController.swift in Sources */,
 				D7DD24BB24F971BB00BF5E3D /* AppDelegate.swift in Sources */,
+				D7DD24D324F9809100BF5E3D /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +303,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Morgana.labritinto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Espasurdo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,7 +320,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Morgana.labritinto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Espasurdo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -325,7 +329,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D7DD24B224F971BB00BF5E3D /* Build configuration list for PBXProject "labritinto" */ = {
+		D7DD24B224F971BB00BF5E3D /* Build configuration list for PBXProject "Espasurdo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7DD24CD24F971BC00BF5E3D /* Debug */,
@@ -334,7 +338,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7DD24CF24F971BC00BF5E3D /* Build configuration list for PBXNativeTarget "labritinto" */ = {
+		D7DD24CF24F971BC00BF5E3D /* Build configuration list for PBXNativeTarget "Espasurdo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7DD24D024F971BC00BF5E3D /* Debug */,
