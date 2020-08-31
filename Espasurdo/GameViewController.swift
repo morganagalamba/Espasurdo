@@ -9,9 +9,17 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import CoreMotion
 
 class GameViewController: UIViewController {
-
+    
+    var sceneNode = GameScene()
+    var timer: Timer!
+    let motionManager = CMMotionManager()
+    var X : CGFloat = 640.0
+    var Y : CGFloat = 640.0
+    var R : CGFloat = 40.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +48,13 @@ class GameViewController: UIViewController {
                 }
             }
         }
+        
+        motionManager.startAccelerometerUpdates()
+        motionManager.startGyroUpdates()
+        motionManager.startMagnetometerUpdates()
+        motionManager.startDeviceMotionUpdates()
+        
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(GameViewController.update), userInfo: nil, repeats: true)
     }
 
     override var shouldAutorotate: Bool {
@@ -56,5 +71,27 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    @objc func update() {
+        if let accelerometerData = motionManager.accelerometerData {
+            print("foi 1")
+            print(accelerometerData)
+        }
+        if let gyroData = motionManager.gyroData {
+            print("foi 2")
+            print(gyroData)
+        }
+        if let magnetometerData = motionManager.magnetometerData {
+            print("foi 3")
+            print(magnetometerData)
+        }
+        if let deviceMotion = motionManager.deviceMotion {
+            print("foi 4")
+            print(deviceMotion)
+        }
+        
+        //sceneNode.ball.run(SKAction.moveTo(x: X , duration: 1)
+        //sceneNode.ball.run(SKAction.moveTo(y: Y , duration: 1))
     }
 }
