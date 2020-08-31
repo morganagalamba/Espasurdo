@@ -134,39 +134,20 @@
             </objects>
             <point key="canvasLocation" x="2102.898550724638" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Api Data View Controller-->
         <scene sceneID="slX-CM-Hc7">
             <objects>
-                <viewController id="LYt-At-sIi" sceneMemberID="viewController">
+                <viewController id="LYt-At-sIi" customClass="ApiDataViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MGN-7S-dDt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shell Galaxies in Pisces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAr-sL-2Bv">
-                                <rect key="frame" x="76" y="72" width="262" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="27/08/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUq-pt-rRC">
-                                <rect key="frame" x="144" y="106" width="126" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rG-9z-Cxq">
-                                <rect key="frame" x="20" y="369" width="374" height="460"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">This intergalactic skyscape features a peculiar system of galaxies cataloged as Arp 227 some 100 million light-years distant. Swimming within the boundaries of the constellation Pisces, Arp 227 consists of the two galaxies prominent right of center, the curious shell galaxy NGC 474 and its blue, spiral-armed neighbor NGC 470. The faint, wide arcs or shells of NGC 474 could have been formed by a gravitational encounter with neighbor NGC 470. Alternately the shells could be caused by a merger with a smaller galaxy producing an effect analogous to ripples across the surface of a pond. The large galaxy on the top lefthand side of the deep image, NGC 467, appears to be surrounded by faint shells too, evidence of another interacting galaxy system. Intriguing background galaxies are scattered around the field that also includes spiky foreground stars. Of course, those stars lie well within our own Milky Way Galaxy. The field of view spans 25 arc minutes or about 1/2 degree on the sky.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="BUC-aq-w4A">
-                                <rect key="frame" x="319" y="787" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="BUC-aq-w4A">
+                                <rect key="frame" x="169.5" y="733" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="B9K-Ty-LD9"/>
+                                    <constraint firstAttribute="height" constant="75" id="Rgk-yq-xt7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="   go again" backgroundImage="Oval">
                                     <color key="titleColor" red="0.94901960780000005" green="0.62745098040000002" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,19 +156,81 @@
                                     <segue destination="i6j-Oq-pX3" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="LMC-Oe-ds2"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28A-AU-pnb">
-                                <rect key="frame" x="20" y="148" width="374" height="259"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="28A-AU-pnb">
+                                <rect key="frame" x="20" y="141" width="374" height="259"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="259" id="8SA-ba-dwW"/>
+                                    <constraint firstAttribute="width" constant="374" id="ett-Qz-H9q"/>
+                                </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-Gf-O1a">
+                                <rect key="frame" x="20" y="408" width="374" height="285"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="285" id="EEm-jD-LZr"/>
+                                    <constraint firstAttribute="width" constant="374" id="yOD-Ri-XVD"/>
+                                </constraints>
+                                <mutableString key="text">This intergalactic skyscape features a peculiar system of galaxies cataloged as Arp 227 some 100 million light-years distant. Swimming within the boundaries of the constellation Pisces, Arp 227 consists of the two galaxies prominent right of center, the curious shell galaxy NGC 474 and its blue, spiral-armed neighbor NGC 470. The faint, wide arcs or shells of NGC 474 could have been formed by a gravitational encounter with neighbor NGC 470. Alternately the shells could be caused by a merger with a smaller galaxy producing an effect analogous to ripples across the surface of a pond. The large galaxy on the top lefthand side of the deep image, NGC 467, appears to be surrounded by faint shells too, evidence of another interacting galaxy system. Intriguing background galaxies are scattered around the field that also includes spiky foreground stars. Of course, those stars lie well within our own Milky Way Galaxy. The field of view spans 25 arc minutes or about 1/2 degree on the sky.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shell Galaxies in Pisces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAr-sL-2Bv">
+                                <rect key="frame" x="76" y="70" width="262" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27/08/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUq-pt-rRC">
+                                <rect key="frame" x="144" y="104" width="126" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zq5-Yb-cHm">
+                                <rect key="frame" x="20" y="141" width="374" height="259"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="259" id="J6p-bj-u6B"/>
+                                    <constraint firstAttribute="width" constant="374" id="jIg-fA-Sob"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" red="0.19215686274509802" green="0.29019607843137252" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UAr-sL-2Bv" firstAttribute="top" secondItem="IVt-1w-Hpj" secondAttribute="top" constant="70" id="5yO-rJ-jcQ"/>
+                            <constraint firstItem="UAr-sL-2Bv" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="6ol-WG-esW"/>
+                            <constraint firstItem="BUC-aq-w4A" firstAttribute="bottom" secondItem="IVt-1w-Hpj" secondAttribute="bottom" id="Cjy-GN-JER"/>
+                            <constraint firstItem="lrZ-Gf-O1a" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="Hql-zF-kgI"/>
+                            <constraint firstItem="28A-AU-pnb" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="MDN-3X-0nv"/>
+                            <constraint firstItem="BUC-aq-w4A" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="TJI-9T-3Iy"/>
+                            <constraint firstItem="lrZ-Gf-O1a" firstAttribute="top" secondItem="28A-AU-pnb" secondAttribute="bottom" constant="8" id="VgU-I7-LF3"/>
+                            <constraint firstItem="eUq-pt-rRC" firstAttribute="top" secondItem="UAr-sL-2Bv" secondAttribute="bottom" constant="5" id="edn-e1-dx9"/>
+                            <constraint firstItem="lrZ-Gf-O1a" firstAttribute="top" secondItem="Zq5-Yb-cHm" secondAttribute="bottom" constant="8" id="flS-fK-INH"/>
+                            <constraint firstItem="eUq-pt-rRC" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="kvU-25-Fby"/>
+                            <constraint firstItem="BUC-aq-w4A" firstAttribute="top" secondItem="lrZ-Gf-O1a" secondAttribute="bottom" constant="40" id="qNb-iu-HQq"/>
+                            <constraint firstItem="28A-AU-pnb" firstAttribute="top" secondItem="eUq-pt-rRC" secondAttribute="bottom" constant="8" id="xez-so-foG"/>
+                            <constraint firstItem="Zq5-Yb-cHm" firstAttribute="top" secondItem="eUq-pt-rRC" secondAttribute="bottom" constant="8" id="xu6-Jb-ins"/>
+                            <constraint firstItem="Zq5-Yb-cHm" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="zap-h6-dNu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IVt-1w-Hpj"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ywy-St-B7V"/>
+                    <connections>
+                        <outlet property="dateApod" destination="eUq-pt-rRC" id="96d-Ba-lqs"/>
+                        <outlet property="explanationApod" destination="lrZ-Gf-O1a" id="tvo-mY-amH"/>
+                        <outlet property="imageApod" destination="28A-AU-pnb" id="1SR-bI-uxf"/>
+                        <outlet property="titelApod" destination="UAr-sL-2Bv" id="m1A-qw-h6o"/>
+                        <outlet property="videoApod" destination="Zq5-Yb-cHm" id="KcB-Ed-jd6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTB-Z5-TF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-819" y="870"/>
+            <point key="canvasLocation" x="-820.28985507246387" y="869.86607142857144"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
