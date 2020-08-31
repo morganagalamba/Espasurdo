@@ -10,10 +10,32 @@ import UIKit
 
 class DatePickerViewController: UIViewController {
 
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Data máxima: dia atual
+        let maxDate = Date()
+        // Data mínima: 28/06/1995
+        let minDate = Date(timeIntervalSince1970: (31536000*25)+(172*86400))
+        
+        self.datePicker.maximumDate = maxDate
+        self.datePicker.minimumDate = minDate
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showApiData", case let nextVC = segue.destination as? ApiDataViewController {
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            
+            // TO DO: Passar data formatada para view ApiData
+            // nextVC?.dateString = formatter.string(from: picker.date)
+        }
     }
     
 

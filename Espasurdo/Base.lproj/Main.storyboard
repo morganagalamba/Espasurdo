@@ -10,7 +10,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="labritinto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,24 +32,16 @@
             </objects>
             <point key="canvasLocation" x="971" y="138"/>
         </scene>
-        <!--First View Controller-->
+        <!--Date Picker View Controller-->
         <scene sceneID="cIX-jk-BZ2">
             <objects>
-                <viewController id="i6j-Oq-pX3" customClass="FirstViewController" customModule="labritinto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="i6j-Oq-pX3" customClass="DatePickerViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IYr-SB-TfM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a special date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFo-yy-Ccf">
-                                <rect key="frame" x="117" y="303" width="181.00000000000003" height="29.000000000000043"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFQ-PD-UgE">
-                                <rect key="frame" x="169" y="521" width="76" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFQ-PD-UgE">
+                                <rect key="frame" x="169" y="596" width="76" height="75"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="go" backgroundImage="Oval">
                                     <color key="titleColor" red="0.94901960784313721" green="0.62745098039215685" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,14 +50,47 @@
                                     <segue destination="BV1-FR-VrT" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="IUL-je-HIl"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="gek-AM-CBj">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="maW-3c-Vtn" eventType="valueChanged" id="qnp-ml-qhs"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzj-BP-BiF">
+                                <rect key="frame" x="151.5" y="832" width="111" height="30"/>
+                                <state key="normal" title="tests API screen"/>
+                                <connections>
+                                    <segue destination="LYt-At-sIi" kind="show" identifier="showApiDate" id="jsB-jV-enM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a special date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFo-yy-Ccf">
+                                <rect key="frame" x="116.5" y="271" width="181" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.19215686274509802" green="0.29019607843137252" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dzj-BP-BiF" firstAttribute="bottom" secondItem="ar7-85-A3s" secondAttribute="bottom" id="0TY-SE-cBa"/>
+                            <constraint firstItem="gek-AM-CBj" firstAttribute="top" secondItem="gFo-yy-Ccf" secondAttribute="bottom" constant="40" id="Eq7-Pu-YNu"/>
+                            <constraint firstItem="gek-AM-CBj" firstAttribute="centerY" secondItem="IYr-SB-TfM" secondAttribute="centerY" id="FVS-Cm-XR0"/>
+                            <constraint firstItem="gek-AM-CBj" firstAttribute="centerX" secondItem="IYr-SB-TfM" secondAttribute="centerX" id="Mcn-ra-45M"/>
+                            <constraint firstItem="WFQ-PD-UgE" firstAttribute="centerX" secondItem="IYr-SB-TfM" secondAttribute="centerX" id="UK9-fq-ev8"/>
+                            <constraint firstItem="WFQ-PD-UgE" firstAttribute="top" secondItem="gek-AM-CBj" secondAttribute="bottom" constant="40" id="ZQK-xs-WdZ"/>
+                            <constraint firstItem="gFo-yy-Ccf" firstAttribute="centerX" secondItem="IYr-SB-TfM" secondAttribute="centerX" id="u0h-X4-1Fa"/>
+                            <constraint firstItem="dzj-BP-BiF" firstAttribute="centerX" secondItem="IYr-SB-TfM" secondAttribute="centerX" id="vWb-ew-3Qz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ar7-85-A3s"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="gek-AM-CBj" id="VzN-u6-PGG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TuO-UQ-bgq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="maW-3c-Vtn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="138"/>
+            <point key="canvasLocation" x="-55.072463768115945" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="c8m-a3-qlh">
@@ -114,7 +139,7 @@
             <objects>
                 <viewController id="LYt-At-sIi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MGN-7S-dDt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shell Galaxies in Pisces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAr-sL-2Bv">
@@ -134,7 +159,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rG-9z-Cxq">
                                 <rect key="frame" x="20" y="369" width="374" height="460"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">This intergalactic skyscape features a peculiar system of galaxies cataloged as Arp 227 some 100 million light-years distant. Swimming within the boundaries of the constellation Pisces, Arp 227 consists of the two galaxies prominent right of center, the curious shell galaxy NGC 474 and its blue, spiral-armed neighbor NGC 470. The faint, wide arcs or shells of NGC 474 could have been formed by a gravitational encounter with neighbor NGC 470. Alternately the shells could be caused by a merger with a smaller galaxy producing an effect analogous to ripples across the surface of a pond. The large galaxy on the top lefthand side of the deep image, NGC 467, appears to be surrounded by faint shells too, evidence of another interacting galaxy system. Intriguing background galaxies are scattered around the field that also includes spiky foreground stars. Of course, those stars lie well within our own Milky Way Galaxy. The field of view spans 25 arc minutes or about 1/2 degree on the sky.</mutableString>
+                                <string key="text">This intergalactic skyscape features a peculiar system of galaxies cataloged as Arp 227 some 100 million light-years distant. Swimming within the boundaries of the constellation Pisces, Arp 227 consists of the two galaxies prominent right of center, the curious shell galaxy NGC 474 and its blue, spiral-armed neighbor NGC 470. The faint, wide arcs or shells of NGC 474 could have been formed by a gravitational encounter with neighbor NGC 470. Alternately the shells could be caused by a merger with a smaller galaxy producing an effect analogous to ripples across the surface of a pond. The large galaxy on the top lefthand side of the deep image, NGC 467, appears to be surrounded by faint shells too, evidence of another interacting galaxy system. Intriguing background galaxies are scattered around the field that also includes spiky foreground stars. Of course, those stars lie well within our own Milky Way Galaxy. The field of view spans 25 arc minutes or about 1/2 degree on the sky.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -158,12 +183,16 @@
                         <color key="backgroundColor" red="0.19215686274509802" green="0.29019607843137252" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="IVt-1w-Hpj"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ywy-St-B7V"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTB-Z5-TF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-819" y="870"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jsB-jV-enM"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Oval" width="76" height="75"/>
     </resources>
