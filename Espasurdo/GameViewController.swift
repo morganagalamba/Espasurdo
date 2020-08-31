@@ -13,7 +13,7 @@ import CoreMotion
 
 class GameViewController: UIViewController {
     
-    var sceneNode = GameScene()
+    //var sceneNode = GameScene()
     var timer: Timer!
     let motionManager = CMMotionManager()
     var X : CGFloat = 640.0
