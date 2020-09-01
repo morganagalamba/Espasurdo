@@ -159,6 +159,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK3-Lh-XXX">
+                                <rect key="frame" x="152" y="261" width="110.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="0vR-6U-OoP">
+                                <rect key="frame" x="270.5" y="262" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="BUC-aq-w4A">
                                 <rect key="frame" x="169.5" y="733" width="75" height="75"/>
                                 <constraints>
@@ -182,13 +192,12 @@
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-Gf-O1a">
                                 <rect key="frame" x="20" y="408" width="374" height="285"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="285" id="EEm-jD-LZr"/>
                                     <constraint firstAttribute="width" constant="374" id="yOD-Ri-XVD"/>
                                 </constraints>
                                 <string key="text">This intergalactic skyscape features a peculiar system of galaxies cataloged as Arp 227 some 100 million light-years distant. Swimming within the boundaries of the constellation Pisces, Arp 227 consists of the two galaxies prominent right of center, the curious shell galaxy NGC 474 and its blue, spiral-armed neighbor NGC 470. The faint, wide arcs or shells of NGC 474 could have been formed by a gravitational encounter with neighbor NGC 470. Alternately the shells could be caused by a merger with a smaller galaxy producing an effect analogous to ripples across the surface of a pond. The large galaxy on the top lefthand side of the deep image, NGC 467, appears to be surrounded by faint shells too, evidence of another interacting galaxy system. Intriguing background galaxies are scattered around the field that also includes spiky foreground stars. Of course, those stars lie well within our own Milky Way Galaxy. The field of view spans 25 arc minutes or about 1/2 degree on the sky.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -219,16 +228,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.19215686274509802" green="0.29019607843137252" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="lrZ-Gf-O1a" firstAttribute="top" secondItem="jK3-Lh-XXX" secondAttribute="bottom" constant="126" id="1lO-cl-PxV"/>
                             <constraint firstItem="UAr-sL-2Bv" firstAttribute="top" secondItem="IVt-1w-Hpj" secondAttribute="top" constant="70" id="5yO-rJ-jcQ"/>
                             <constraint firstItem="UAr-sL-2Bv" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="6ol-WG-esW"/>
+                            <constraint firstItem="0vR-6U-OoP" firstAttribute="leading" secondItem="jK3-Lh-XXX" secondAttribute="trailing" constant="8" id="9L8-da-bDQ"/>
                             <constraint firstItem="BUC-aq-w4A" firstAttribute="bottom" secondItem="IVt-1w-Hpj" secondAttribute="bottom" id="Cjy-GN-JER"/>
                             <constraint firstItem="lrZ-Gf-O1a" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="Hql-zF-kgI"/>
                             <constraint firstItem="28A-AU-pnb" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="MDN-3X-0nv"/>
                             <constraint firstItem="BUC-aq-w4A" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="TJI-9T-3Iy"/>
                             <constraint firstItem="lrZ-Gf-O1a" firstAttribute="top" secondItem="28A-AU-pnb" secondAttribute="bottom" constant="8" id="VgU-I7-LF3"/>
+                            <constraint firstItem="jK3-Lh-XXX" firstAttribute="top" secondItem="eUq-pt-rRC" secondAttribute="bottom" constant="128" id="ZjT-ag-hS7"/>
                             <constraint firstItem="eUq-pt-rRC" firstAttribute="top" secondItem="UAr-sL-2Bv" secondAttribute="bottom" constant="5" id="edn-e1-dx9"/>
                             <constraint firstItem="lrZ-Gf-O1a" firstAttribute="top" secondItem="Zq5-Yb-cHm" secondAttribute="bottom" constant="8" id="flS-fK-INH"/>
+                            <constraint firstItem="lrZ-Gf-O1a" firstAttribute="top" secondItem="0vR-6U-OoP" secondAttribute="bottom" constant="126" id="k0k-Cv-TM3"/>
                             <constraint firstItem="eUq-pt-rRC" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="kvU-25-Fby"/>
+                            <constraint firstItem="jK3-Lh-XXX" firstAttribute="centerX" secondItem="MGN-7S-dDt" secondAttribute="centerX" id="pLh-fM-WYi"/>
                             <constraint firstItem="BUC-aq-w4A" firstAttribute="top" secondItem="lrZ-Gf-O1a" secondAttribute="bottom" constant="40" id="qNb-iu-HQq"/>
                             <constraint firstItem="28A-AU-pnb" firstAttribute="top" secondItem="eUq-pt-rRC" secondAttribute="bottom" constant="8" id="xez-so-foG"/>
                             <constraint firstItem="Zq5-Yb-cHm" firstAttribute="top" secondItem="eUq-pt-rRC" secondAttribute="bottom" constant="8" id="xu6-Jb-ins"/>
@@ -238,9 +252,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ywy-St-B7V"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="0vR-6U-OoP" id="kOV-MM-RBe"/>
                         <outlet property="dateApod" destination="eUq-pt-rRC" id="96d-Ba-lqs"/>
                         <outlet property="explanationApod" destination="lrZ-Gf-O1a" id="tvo-mY-amH"/>
                         <outlet property="imageApod" destination="28A-AU-pnb" id="1SR-bI-uxf"/>
+                        <outlet property="loadingLabel" destination="jK3-Lh-XXX" id="PN1-Sf-qlB"/>
                         <outlet property="titelApod" destination="UAr-sL-2Bv" id="m1A-qw-h6o"/>
                         <outlet property="videoApod" destination="Zq5-Yb-cHm" id="KcB-Ed-jd6"/>
                     </connections>
