@@ -92,43 +92,60 @@
             </objects>
             <point key="canvasLocation" x="-55.072463768115945" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Proximity View Controller-->
         <scene sceneID="c8m-a3-qlh">
             <objects>
-                <viewController id="ShX-VO-x82" sceneMemberID="viewController">
+                <viewController id="ShX-VO-x82" customClass="proximityViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2dv-f2-MnF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8a-Ya-x7W">
-                                <rect key="frame" x="131" y="395" width="152" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8a-Ya-x7W">
+                                <rect key="frame" x="131" y="401" width="152" height="94"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="78"/>
                                 <color key="textColor" red="0.45098039215686275" green="0.17254901960784313" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RT-2q-4k3">
-                                <rect key="frame" x="172" y="659" width="76" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RT-2q-4k3">
+                                <rect key="frame" x="169" y="659" width="76" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Gej-ZR-KYe"/>
+                                    <constraint firstAttribute="width" constant="76" id="I2g-uJ-Ykp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="start" backgroundImage="Oval">
                                     <color key="titleColor" red="0.94901960780000005" green="0.62745098040000002" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LYt-At-sIi" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="e8B-Q0-muI"/>
+                                    <action selector="startTapped:" destination="ShX-VO-x82" eventType="touchUpInside" id="lGG-VF-b9b"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Move your forehead over the top speaker, when the timer almost reaches 0." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7X-lO-pWZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move your forehead over the top speaker, when the timer almost reaches 0." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7X-lO-pWZ">
                                 <rect key="frame" x="73" y="145" width="268" height="173"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173" id="9gN-ed-IS7"/>
+                                    <constraint firstAttribute="width" constant="268" id="ruQ-Ua-73b"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.19215686274509802" green="0.29019607843137252" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="I8a-Ya-x7W" firstAttribute="centerX" secondItem="2dv-f2-MnF" secondAttribute="centerX" id="KSm-rG-I1E"/>
+                            <constraint firstItem="o7X-lO-pWZ" firstAttribute="top" secondItem="o8D-IH-1Gy" secondAttribute="top" constant="101" id="KcI-Gi-T1l"/>
+                            <constraint firstItem="2RT-2q-4k3" firstAttribute="centerX" secondItem="2dv-f2-MnF" secondAttribute="centerX" id="Ter-Ep-39R"/>
+                            <constraint firstItem="I8a-Ya-x7W" firstAttribute="centerY" secondItem="2dv-f2-MnF" secondAttribute="centerY" id="Zpt-2m-2G1"/>
+                            <constraint firstItem="2RT-2q-4k3" firstAttribute="top" secondItem="I8a-Ya-x7W" secondAttribute="bottom" constant="164" id="lwi-kv-2ad"/>
+                            <constraint firstItem="o7X-lO-pWZ" firstAttribute="centerX" secondItem="2dv-f2-MnF" secondAttribute="centerX" id="rUd-Pu-scu"/>
+                            <constraint firstItem="o8D-IH-1Gy" firstAttribute="bottom" secondItem="2RT-2q-4k3" secondAttribute="bottom" constant="128" id="x5K-CE-CMG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o8D-IH-1Gy"/>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="I8a-Ya-x7W" id="DK6-0H-8QJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gvq-CW-9ch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,12 +187,12 @@
                                     <constraint firstAttribute="height" constant="285" id="EEm-jD-LZr"/>
                                     <constraint firstAttribute="width" constant="374" id="yOD-Ri-XVD"/>
                                 </constraints>
-                                <mutableString key="text">This intergalactic skyscape features a peculiar system of galaxies cataloged as Arp 227 some 100 million light-years distant. Swimming within the boundaries of the constellation Pisces, Arp 227 consists of the two galaxies prominent right of center, the curious shell galaxy NGC 474 and its blue, spiral-armed neighbor NGC 470. The faint, wide arcs or shells of NGC 474 could have been formed by a gravitational encounter with neighbor NGC 470. Alternately the shells could be caused by a merger with a smaller galaxy producing an effect analogous to ripples across the surface of a pond. The large galaxy on the top lefthand side of the deep image, NGC 467, appears to be surrounded by faint shells too, evidence of another interacting galaxy system. Intriguing background galaxies are scattered around the field that also includes spiky foreground stars. Of course, those stars lie well within our own Milky Way Galaxy. The field of view spans 25 arc minutes or about 1/2 degree on the sky.</mutableString>
+                                <string key="text">This intergalactic skyscape features a peculiar system of galaxies cataloged as Arp 227 some 100 million light-years distant. Swimming within the boundaries of the constellation Pisces, Arp 227 consists of the two galaxies prominent right of center, the curious shell galaxy NGC 474 and its blue, spiral-armed neighbor NGC 470. The faint, wide arcs or shells of NGC 474 could have been formed by a gravitational encounter with neighbor NGC 470. Alternately the shells could be caused by a merger with a smaller galaxy producing an effect analogous to ripples across the surface of a pond. The large galaxy on the top lefthand side of the deep image, NGC 467, appears to be surrounded by faint shells too, evidence of another interacting galaxy system. Intriguing background galaxies are scattered around the field that also includes spiky foreground stars. Of course, those stars lie well within our own Milky Way Galaxy. The field of view spans 25 arc minutes or about 1/2 degree on the sky.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shell Galaxies in Pisces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAr-sL-2Bv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Shell Galaxies in Pisces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAr-sL-2Bv">
                                 <rect key="frame" x="76" y="70" width="262" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -233,9 +250,6 @@
             <point key="canvasLocation" x="-820.28985507246387" y="869.86607142857144"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="jsB-jV-enM"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Oval" width="76" height="75"/>
     </resources>

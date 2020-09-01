@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE10F9E924FEF56000E96C6C /* proximityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE10F9E824FEF56000E96C6C /* proximityViewController.swift */; };
 		BEC76B9A24FD89A10001DA63 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC76B9924FD89A10001DA63 /* DatePickerViewController.swift */; };
 		BEC76B9C24FD8A800001DA63 /* ApiDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC76B9B24FD8A800001DA63 /* ApiDataViewController.swift */; };
 		BEC76B9E24FD9C030001DA63 /* Apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC76B9D24FD9C030001DA63 /* Apod.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE10F9E824FEF56000E96C6C /* proximityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = proximityViewController.swift; sourceTree = "<group>"; };
 		BEC76B9924FD89A10001DA63 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		BEC76B9B24FD8A800001DA63 /* ApiDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataViewController.swift; sourceTree = "<group>"; };
 		BEC76B9D24FD9C030001DA63 /* Apod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apod.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				BEC76B9924FD89A10001DA63 /* DatePickerViewController.swift */,
 				BEC76B9B24FD8A800001DA63 /* ApiDataViewController.swift */,
 				BEC76B9D24FD9C030001DA63 /* Apod.swift */,
+				BE10F9E824FEF56000E96C6C /* proximityViewController.swift */,
 			);
 			path = Espasurdo;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				D7DD24C124F971BB00BF5E3D /* GameScene.swift in Sources */,
 				BEC76B9C24FD8A800001DA63 /* ApiDataViewController.swift in Sources */,
 				BEC76B9A24FD89A10001DA63 /* DatePickerViewController.swift in Sources */,
+				BE10F9E924FEF56000E96C6C /* proximityViewController.swift in Sources */,
 				D7DD24C324F971BB00BF5E3D /* GameViewController.swift in Sources */,
 				D7DD24BB24F971BB00BF5E3D /* AppDelegate.swift in Sources */,
 				D7DD24D324F9809100BF5E3D /* FirstViewController.swift in Sources */,
@@ -321,7 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28CMR6C7AZ;
+				DEVELOPMENT_TEAM = 23WSBM7T82;
 				INFOPLIST_FILE = Espasurdo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -339,7 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28CMR6C7AZ;
+				DEVELOPMENT_TEAM = 23WSBM7T82;
 				INFOPLIST_FILE = Espasurdo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
