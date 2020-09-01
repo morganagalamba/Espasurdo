@@ -28,13 +28,13 @@ class DatePickerViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "showApiData", case let nextVC = segue.destination as? ApiDataViewController {
+        if segue.identifier == "showApiDate", case let nextVC = segue.destination as? ApiDataViewController {
             
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd"
             
-            // TO DO: Passar data formatada para view ApiData
-            // nextVC?.dateString = formatter.string(from: picker.date)
+            // Passar data formatada para view ApiData
+            nextVC?.dataString = formatter.string(from: self.datePicker.date)
         }
     }
     
