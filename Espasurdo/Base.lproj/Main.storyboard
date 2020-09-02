@@ -145,6 +145,7 @@
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="I8a-Ya-x7W" id="DK6-0H-8QJ"/>
+                        <outlet property="startButton" destination="2RT-2q-4k3" id="zqs-Tz-TQB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gvq-CW-9ch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -12,6 +12,7 @@ class proximityViewController: UIViewController {
 
     
     @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     
     var device = UIDevice.current
     var timer = Timer()
@@ -26,6 +27,7 @@ class proximityViewController: UIViewController {
     @IBAction func startTapped(_ sender: Any) {
         startObserve()
         device.isProximityMonitoringEnabled = true
+        self.startButton.isEnabled = false
     }
     
     func startObserve () {
