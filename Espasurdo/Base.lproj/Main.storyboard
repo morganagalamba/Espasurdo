@@ -170,7 +170,7 @@
                                     <constraint firstAttribute="height" constant="285" id="EEm-jD-LZr"/>
                                     <constraint firstAttribute="width" constant="374" id="yOD-Ri-XVD"/>
                                 </constraints>
-                                <mutableString key="text">This intergalactic skyscape features a peculiar system of galaxies cataloged as Arp 227 some 100 million light-years distant. Swimming within the boundaries of the constellation Pisces, Arp 227 consists of the two galaxies prominent right of center, the curious shell galaxy NGC 474 and its blue, spiral-armed neighbor NGC 470. The faint, wide arcs or shells of NGC 474 could have been formed by a gravitational encounter with neighbor NGC 470. Alternately the shells could be caused by a merger with a smaller galaxy producing an effect analogous to ripples across the surface of a pond. The large galaxy on the top lefthand side of the deep image, NGC 467, appears to be surrounded by faint shells too, evidence of another interacting galaxy system. Intriguing background galaxies are scattered around the field that also includes spiky foreground stars. Of course, those stars lie well within our own Milky Way Galaxy. The field of view spans 25 arc minutes or about 1/2 degree on the sky.</mutableString>
+                                <string key="text">This intergalactic skyscape features a peculiar system of galaxies cataloged as Arp 227 some 100 million light-years distant. Swimming within the boundaries of the constellation Pisces, Arp 227 consists of the two galaxies prominent right of center, the curious shell galaxy NGC 474 and its blue, spiral-armed neighbor NGC 470. The faint, wide arcs or shells of NGC 474 could have been formed by a gravitational encounter with neighbor NGC 470. Alternately the shells could be caused by a merger with a smaller galaxy producing an effect analogous to ripples across the surface of a pond. The large galaxy on the top lefthand side of the deep image, NGC 467, appears to be surrounded by faint shells too, evidence of another interacting galaxy system. Intriguing background galaxies are scattered around the field that also includes spiky foreground stars. Of course, those stars lie well within our own Milky Way Galaxy. The field of view spans 25 arc minutes or about 1/2 degree on the sky.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTB-Z5-TF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-820.28985507246387" y="869.86607142857144"/>
+            <point key="canvasLocation" x="-1109" y="957"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
