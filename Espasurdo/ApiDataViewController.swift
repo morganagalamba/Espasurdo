@@ -16,6 +16,8 @@ class ApiDataViewController: UIViewController {
     @IBOutlet weak var imageApod: UIImageView!
     @IBOutlet weak var explanationApod: UITextView!
     @IBOutlet weak var videoApod: WKWebView!
+    @IBOutlet weak var loadingLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var dataString = ""
     
@@ -26,6 +28,10 @@ class ApiDataViewController: UIViewController {
         
         self.videoApod.isHidden = true
         self.imageApod.isHidden = true
+        
+        self.activityIndicator.startAnimating()
+        
+        self.loadingLabel.text = "Loading media"
         
     }
     
@@ -39,13 +45,14 @@ class ApiDataViewController: UIViewController {
                 let decoder = JSONDecoder()
                 let apodData: Apod = try decoder.decode(Apod.self, from: data!)
                 
-                // Baixar imagem e atualizar imagemView
+                // Baixar conteúdo e atualizar interface
+                self.updateTitleDate(apodData.title, apodData.date)
                 if apodData.mediaType == "image" {
                     self.updateImage(apodData.url)
                 } else {
                     self.updateVideo(apodData.url)
                 }
-                self.updateTitleDate(apodData.title, apodData.date)
+                
                 
                 
             } catch {
@@ -78,7 +85,7 @@ class ApiDataViewController: UIViewController {
                 
                 self.imageApod.image = UIImage(data: data)!
                 
-                print("Atualizou imagem")
+                self.activityIndicator.stopAnimating()
             }
         }
     }
@@ -92,6 +99,8 @@ class ApiDataViewController: UIViewController {
             self.videoApod.isHidden = false
             
             self.videoApod.load(request)
+            
+            self.activityIndicator.stopAnimating()
         }
         
         
