@@ -60,7 +60,17 @@ class GameViewController: UIViewController {
             sceneNode?.isPaused = true
             timer.invalidate()
             //self.navigationController?.show(proximityViewController(), sender: nil)
-            self.show(self.nextViewController, sender: nil)
+            //self.show(self.nextViewController, sender: nil)
+            //self.navigationController?.
+            //show(self.nextViewController, sender: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyboard.instantiateViewController(identifier: "proximity") as! ProximityViewController
+            
+            self.show(nextVC, sender: nil)
+            
+            //self.present(nextVC, animated: true, completion: nil)
+            
+            //self.navigationController?.pushViewController(nextVC, animated: true)
         }
     }
 
