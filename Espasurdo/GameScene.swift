@@ -26,6 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var newX : CGFloat = 0.0
     var newY : CGFloat = 0.0
     var hit: Bool = false
+    var hitEnd: Bool = false
     
     override func sceneDidLoad() {
         
@@ -57,6 +58,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let node = contact.bodyA.node?.name {
             if(node  == "end"){
                 print("conseguiu")
+                self.hitEnd = true
             }
         }
             
@@ -64,6 +66,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if(node == "end"){
                 print("conseguiu")
+                self.hitEnd = true
             }
          }
     }

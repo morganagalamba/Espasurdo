@@ -10,7 +10,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +102,7 @@
         <!--Proximity View Controller-->
         <scene sceneID="c8m-a3-qlh">
             <objects>
-                <viewController storyboardIdentifier="proximity" id="ShX-VO-x82" customClass="ProximityViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="proximity" modalPresentationStyle="fullScreen" id="ShX-VO-x82" customClass="ProximityViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2dv-f2-MnF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +166,7 @@
         <!--Api Data View Controller-->
         <scene sceneID="slX-CM-Hc7">
             <objects>
-                <viewController id="LYt-At-sIi" customClass="ApiDataViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="apiData" modalPresentationStyle="fullScreen" id="LYt-At-sIi" customClass="ApiDataViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MGN-7S-dDt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,7 +279,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tm6-pK-z8c"/>
+        <segue reference="LMC-Oe-ds2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Oval" width="76" height="75"/>
