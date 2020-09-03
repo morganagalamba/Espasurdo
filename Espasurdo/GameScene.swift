@@ -20,8 +20,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var lastUpdateTime : TimeInterval = 0
     private var spinnyNode : SKShapeNode?
     var timer : Timer!
-    var X : Double = 0.0
-    var Y : Double = 0.0
+    var X : Double = -360.0
+    var Y : Double = 865.0
     var R : Double = 40.0
     var newX : CGFloat = 0.0
     var newY : CGFloat = 0.0
@@ -77,12 +77,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         newX = newX + CGFloat(X)
         newY = newY + CGFloat(Y)
            
-        newX = fmin(320, fmax(-320, newX))
-        newY = fmin(640, fmax(-640, newY))
+        newX = fmin(390, fmax(-390, newX))
+        newY = fmin(880, fmax(-816, newY))
 
-        ball.run(SKAction.moveTo(x: newX, duration: 0.2))
-        ball.run(SKAction.moveTo(y: -newY, duration: 0.2))
-        
+
+            ball.run(SKAction.moveTo(x: newX, duration: 0.2))
+            ball.run(SKAction.moveTo(y: -newY, duration: 0.2))
+ 
        
     }
     
