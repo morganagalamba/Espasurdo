@@ -46,6 +46,26 @@ class GameViewController: UIViewController {
         self.startObserve()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("Entrou viewDidAppear")
+        self.startObserve()
+        if UserDefaults.standard.bool(forKey: "hitSensor") == true {
+            UserDefaults.standard.set(false, forKey: "hitSensor")
+            //self.startObserve()
+            self.sceneNode?.isPaused = false
+            self.sceneNode?.updateXY()
+        } else {
+            UserDefaults.standard.set(false, forKey: "hitSensor")
+            //self.startObserve()
+            self.sceneNode?.isPaused = false
+            self.sceneNode?.restart()
+        }
+    }
+    
     func startObserve () {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.checksStatusHit)), userInfo: nil, repeats: true)
@@ -57,6 +77,7 @@ class GameViewController: UIViewController {
         print(sceneNode?.hit)
         
         if sceneNode?.hit != false {
+            self.sceneNode?.hit = false
             sceneNode?.isPaused = true
             timer.invalidate()
             //self.navigationController?.show(proximityViewController(), sender: nil)
@@ -66,14 +87,15 @@ class GameViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let nextVC = storyboard.instantiateViewController(identifier: "proximity") as! ProximityViewController
             
-            self.show(nextVC, sender: nil)
+            //self.show(nextVC, sender: nil)
             
             //self.present(nextVC, animated: true, completion: nil)
             
-            //self.navigationController?.pushViewController(nextVC, animated: true)
+            self.navigationController?.pushViewController(nextVC, animated: true)
         }
         
         if sceneNode?.hitEnd != false {
+            self.sceneNode?.hit = false
             timer.invalidate()
             sceneNode?.isPaused = true
             //self.navigationController?.show(proximityViewController(), sender: nil)
@@ -83,11 +105,28 @@ class GameViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let nextVC = storyboard.instantiateViewController(identifier: "apiData") as! ApiDataViewController
             
-            self.show(nextVC, sender: nil)
+            //self.show(nextVC, sender: nil)
             
             //self.present(nextVC, animated: true, completion: nil)
             
+            self.navigationController?.pushViewController(nextVC, animated: true)
+            
             //self.navigationController?.pushViewController(nextVC, animated: true)
+        }
+        
+    }
+    
+    func restart(){
+        
+        if let view = self.view as! SKView? {
+            let scene = SKScene(fileNamed: "GameScene")!
+            sceneNode = scene as! GameScene
+            //sceneNode.scaleMode = .aspectFill
+            view.presentScene(sceneNode)
+            view.ignoresSiblingOrder = false
+            //view.showsPhysics = true
+            
+            self.sceneNode = sceneNode!
         }
     }
 

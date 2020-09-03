@@ -21,7 +21,9 @@ class ProximityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //counterLabel.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+        counterLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+        
+        UserDefaults.standard.set(false, forKey: "hitSensor")
     }
 
     @IBAction func startTapped(_ sender: Any) {
@@ -31,11 +33,10 @@ class ProximityViewController: UIViewController {
     }
 
     func startObserve () {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.verifyProximityState)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: (#selector(self.verifyProximityState)), userInfo: nil, repeats: true)
     }
 
     @objc func verifyProximityState () {
-        print(device.proximityState)
         if (device.proximityState == false) {
             self.updateCounterLabel()
         } else {
@@ -43,12 +44,26 @@ class ProximityViewController: UIViewController {
             timer.invalidate()
             // Para de monitorar o proximity state
             device.isProximityMonitoringEnabled = false
+            // Verifica se conseguiu parar a tempo
+            if self.timeCounter <= 30 && self.timeCounter >= 0 {
+                UserDefaults.standard.set(true, forKey: "hitSensor")
+            }
+            print(self.isBeingDismissed)
+            //dismiss(animated: true, completion: nil)
+            
+            //self.navigationController?.dismiss(animated: true, completion: nil)
+            
+            self.navigationController?.popViewController(animated: false)
+            
+            print(self.isBeingDismissed)
         }
     }
 
     func updateCounterLabel () {
         self.timeCounter -= 1
-        if self.timeCounter <= 0 {
+        if self.timeCounter <= 30 && self.timeCounter >= 0 {
+            counterLabel.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+        } else {
             counterLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         }
         counterLabel.text = String(timeCounter)
