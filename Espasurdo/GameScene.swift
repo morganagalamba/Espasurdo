@@ -25,7 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var R : Double = 40.0
     var newX : CGFloat = 0.0
     var newY : CGFloat = 0.0
-   var bateu = false
+    var hit: Bool = false
     
     override func sceneDidLoad() {
         
@@ -40,7 +40,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let node = contact.bodyA.node?.name {
             if(node  == "wall"){
                 print("bateu")
-                self.bateu = true
+                self.hit = true
             }
         }
             
@@ -48,7 +48,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if(node == "wall"){
                 print("bateu")
-                self.bateu = true
+                self.hit = true
             }
          }
         

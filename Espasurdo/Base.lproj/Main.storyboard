@@ -95,13 +95,16 @@
         <!--Proximity View Controller-->
         <scene sceneID="c8m-a3-qlh">
             <objects>
-                <viewController id="ShX-VO-x82" customClass="proximityViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ShX-VO-x82" customClass="ProximityViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2dv-f2-MnF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8a-Ya-x7W">
                                 <rect key="frame" x="131" y="401" width="152" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="ob4-u6-NNV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="78"/>
                                 <color key="textColor" red="0.45098039215686275" green="0.17254901960784313" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -117,7 +120,7 @@
                                     <color key="titleColor" red="0.94901960780000005" green="0.62745098040000002" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="startTapped:" destination="ShX-VO-x82" eventType="touchUpInside" id="lGG-VF-b9b"/>
+                                    <action selector="startTapped:" destination="ShX-VO-x82" eventType="touchUpInside" id="EIz-7H-e4U"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move your forehead over the top speaker, when the timer almost reaches 0." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7X-lO-pWZ">
@@ -144,8 +147,8 @@
                         <viewLayoutGuide key="safeArea" id="o8D-IH-1Gy"/>
                     </view>
                     <connections>
-                        <outlet property="counterLabel" destination="I8a-Ya-x7W" id="DK6-0H-8QJ"/>
-                        <outlet property="startButton" destination="2RT-2q-4k3" id="zqs-Tz-TQB"/>
+                        <outlet property="counterLabel" destination="I8a-Ya-x7W" id="Jfe-PK-Eq3"/>
+                        <outlet property="startButton" destination="2RT-2q-4k3" id="bXB-M0-YtS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gvq-CW-9ch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
