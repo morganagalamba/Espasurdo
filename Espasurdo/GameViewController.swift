@@ -12,38 +12,56 @@ import GameplayKit
 
 
 class GameViewController: UIViewController {
-
     
+    let scene = GKScene(fileNamed: "GameScene")
+    var sceneNode: GameScene? = nil
+    
+    var timer = Timer()
+    let nextViewController = ProximityViewController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
-        if let scene = GKScene(fileNamed: "GameScene") {
+        
+        self.sceneNode = scene!.rootNode as! GameScene?
+        
+        sceneNode!.entities = scene!.entities
+        sceneNode!.graphs = scene!.graphs
+        
+        // Set the scale mode to scale to fit the window
+        sceneNode!.scaleMode = .aspectFill
+        
+        // Present the scene
+        if let view = self.view as! SKView? {
+            view.presentScene(sceneNode)
             
-            // Get the SKScene from the loaded GKScene
-            if let sceneNode = scene.rootNode as! GameScene? {
-                
-                // Copy gameplay related content over to the scene
-                sceneNode.entities = scene.entities
-                sceneNode.graphs = scene.graphs
-                
-                // Set the scale mode to scale to fit the window
-                sceneNode.scaleMode = .aspectFill
-                
-                // Present the scene
-                if let view = self.view as! SKView? {
-                    view.presentScene(sceneNode)
-                    
-                    view.ignoresSiblingOrder = true
-
-                    
-                    view.showsFPS = false
-                    view.showsNodeCount = false
-                }
-            }
+            view.ignoresSiblingOrder = true
+            
+            view.showsFPS = false
+            view.showsNodeCount = false
         }
-
+        
+        self.startObserve()
+    }
+    
+    func startObserve () {
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.checksStatusHit)), userInfo: nil, repeats: true)
+        
+    }
+    
+    @objc func checksStatusHit() {
+        
+        print(sceneNode?.hit)
+        
+        if sceneNode?.hit != false {
+            sceneNode?.isPaused = true
+            timer.invalidate()
+            //self.navigationController?.show(proximityViewController(), sender: nil)
+            self.show(self.nextViewController, sender: nil)
+        }
     }
 
 }
