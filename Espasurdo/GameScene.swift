@@ -40,6 +40,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let node = contact.bodyA.node?.name {
             if(node  == "wall"){
                 print("bateu")
+                self.isPaused = true
                 self.hit = true
             }
         }
@@ -48,6 +49,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if(node == "wall"){
                 print("bateu")
+                self.isPaused = true
                 self.hit = true
             }
          }
