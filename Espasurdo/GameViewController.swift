@@ -15,13 +15,14 @@ class GameViewController: UIViewController {
     
     let scene = GKScene(fileNamed: "GameScene")
     var sceneNode: GameScene? = nil
-    
+
     var timer = Timer()
     let nextViewController = ProximityViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        MusicPlayer.shared.startBackgroundMusic()
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         
