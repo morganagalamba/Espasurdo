@@ -54,9 +54,12 @@ class GameViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "backgroundMusic")
-        print("Entrou viewDidAppear")
+        //print("Entrou viewDidAppear")
+        print("estado do hitSensor")
+        print(UserDefaults.standard.bool(forKey: "hitSensor"))
         self.startObserve()
         if UserDefaults.standard.bool(forKey: "hitSensor") == true {
+            
             UserDefaults.standard.set(false, forKey: "hitSensor")
             //self.startObserve()
             self.sceneNode?.isPaused = false
@@ -77,7 +80,7 @@ class GameViewController: UIViewController {
     
     @objc func checksStatusHit() {
         
-        print(sceneNode?.hit)
+        //print(sceneNode?.hit)
         
         if sceneNode?.hit != false {
             

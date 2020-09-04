@@ -55,6 +55,7 @@ class ProximityViewController: UIViewController {
                 // Verifica se conseguiu parar a tempo
                 if self.timeCounter <= 30 && self.timeCounter >= 0 {
                     UserDefaults.standard.set(true, forKey: "hitSensor")
+                    print("nkjlwqhfnwieohwhio")
                 }
                 //print(self.isBeingDismissed)
                 //dismiss(animated: true, completion: nil)
