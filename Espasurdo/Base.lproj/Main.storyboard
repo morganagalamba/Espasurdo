@@ -26,7 +26,8 @@
         <!--Navigation Controller-->
         <scene sceneID="71g-59-dAH">
             <objects>
-                <navigationController navigationBarHidden="YES" id="B5S-hm-6s1" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="B5S-hm-6s1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Bi8-h2-pHt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dOq-97-lVD">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -41,7 +42,7 @@
         <!--Date Picker View Controller-->
         <scene sceneID="cIX-jk-BZ2">
             <objects>
-                <viewController id="i6j-Oq-pX3" customClass="DatePickerViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="i6j-Oq-pX3" customClass="DatePickerViewController" customModule="Espasurdo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IYr-SB-TfM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,7 +193,7 @@
                                     <color key="titleColor" red="0.94901960780000005" green="0.62745098040000002" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="i6j-Oq-pX3" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="LMC-Oe-ds2"/>
+                                    <segue destination="B5S-hm-6s1" kind="show" id="ujr-OO-GoP"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="28A-AU-pnb">
@@ -278,9 +279,6 @@
             <point key="canvasLocation" x="-1109" y="957"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="LMC-Oe-ds2"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Oval" width="76" height="75"/>
     </resources>
