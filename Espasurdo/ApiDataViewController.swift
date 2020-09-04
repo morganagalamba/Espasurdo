@@ -23,7 +23,7 @@ class ApiDataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "principalBackgroundMusic")
         self.dateString = UserDefaults.standard.string(forKey: "date")!
         
         print(self.dateString)

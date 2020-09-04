@@ -13,8 +13,8 @@ class MusicPlayer {
     static let shared = MusicPlayer()
     var audioPlayer: AVAudioPlayer?
     
-    func startBackgroundMusic() {
-        if let bundle = Bundle.main.path(forResource: "backgroundMusic", ofType: "mp3") {
+    func startBackgroundMusic(backgroundMusicFileName: String) {
+        if let bundle = Bundle.main.path(forResource: backgroundMusicFileName, ofType: "mp3") {
             let backgroundMusic = NSURL(fileURLWithPath: bundle)
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf:backgroundMusic as URL)

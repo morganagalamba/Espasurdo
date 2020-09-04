@@ -15,7 +15,7 @@ class DatePickerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MusicPlayer.shared.startBackgroundMusic()
+        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "principalBackgroundMusic")
         // Data máxima: dia atual
         let maxDate = Date()
         // Data mínima: 28/06/1995

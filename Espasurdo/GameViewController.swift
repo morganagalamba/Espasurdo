@@ -21,8 +21,9 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.set(false, forKey: "hitSensor")
         
-        MusicPlayer.shared.startBackgroundMusic()
+        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "backgroundMusic")
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         
@@ -52,6 +53,7 @@ class GameViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "backgroundMusic")
         print("Entrou viewDidAppear")
         self.startObserve()
         if UserDefaults.standard.bool(forKey: "hitSensor") == true {
@@ -78,6 +80,7 @@ class GameViewController: UIViewController {
         print(sceneNode?.hit)
         
         if sceneNode?.hit != false {
+            
             self.sceneNode?.hit = false
             sceneNode?.isPaused = true
             timer.invalidate()
@@ -86,6 +89,7 @@ class GameViewController: UIViewController {
             //self.navigationController?.
             //show(self.nextViewController, sender: nil)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
             let nextVC = storyboard.instantiateViewController(identifier: "proximity") as! ProximityViewController
             
             //self.show(nextVC, sender: nil)

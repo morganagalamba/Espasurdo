@@ -13,7 +13,6 @@ import CoreMotion
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    var backgroundMusic: SKAudioNode!
     var ball: SKNode = SKNode()
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
@@ -33,10 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var queueY: Queue<CGFloat> = Queue<CGFloat>()
     
     override func sceneDidLoad() {
-        if let musicURL = Bundle.main.url(forResource: "music", withExtension: "m4a") {
-            backgroundMusic = SKAudioNode(url: musicURL)
-            addChild(backgroundMusic)
-        }
+        
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
         ball = self.childNode(withName: "ball")!
@@ -50,6 +46,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 print("bateu")
                 self.isPaused = true
                 self.hit = true
+                
             }
         }
             
@@ -137,7 +134,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func restart() {
         ball.run(SKAction.moveTo(x: -360, duration: 2))
-        ball.run(SKAction.moveTo(y: -(-865), duration: 2))
+        ball.run(SKAction.moveTo(y: 865, duration: 2))
     }
     
 }

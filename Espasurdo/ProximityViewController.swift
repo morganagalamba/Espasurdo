@@ -21,10 +21,10 @@ class ProximityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "proximityBackground")
         counterLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         
-        UserDefaults.standard.set(false, forKey: "hitSensor")
+        
     }
 
     @IBAction func startTapped(_ sender: Any) {
