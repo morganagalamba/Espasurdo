@@ -95,7 +95,7 @@ class GameViewController: UIViewController {
         }
         
         if sceneNode?.hitEnd != false {
-            self.sceneNode?.hit = false
+            self.sceneNode?.hitEnd = false
             timer.invalidate()
             sceneNode?.isPaused = true
             //self.navigationController?.show(proximityViewController(), sender: nil)

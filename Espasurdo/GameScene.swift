@@ -61,6 +61,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let node = contact.bodyA.node?.name {
             if(node  == "end"){
                 print("conseguiu")
+                self.isPaused = true
                 self.hitEnd = true
             }
         }
@@ -69,6 +70,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if(node == "end"){
                 print("conseguiu")
+                self.isPaused = true
                 self.hitEnd = true
             }
          }

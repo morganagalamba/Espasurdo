@@ -19,12 +19,16 @@ class ApiDataViewController: UIViewController {
     @IBOutlet weak var loadingLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    var dataString = ""
+    var dateString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.dateString = UserDefaults.standard.string(forKey: "date")!
+        
+        print(self.dateString)
 
-        self.load(dataString)
+        self.load(dateString)
         
         self.videoApod.isHidden = true
         self.imageApod.isHidden = true
