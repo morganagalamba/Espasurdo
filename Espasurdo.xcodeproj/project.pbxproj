@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BE10F9E924FEF56000E96C6C /* ProximityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE10F9E824FEF56000E96C6C /* ProximityViewController.swift */; };
+		BE88133825029658000080CC /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D7768090250292A600D53695 /* hit.mp3 */; };
+		BE88133A250297BB000080CC /* impact.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BE881339250297BB000080CC /* impact.mp3 */; };
 		BEC76B9A24FD89A10001DA63 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC76B9924FD89A10001DA63 /* DatePickerViewController.swift */; };
 		BEC76B9C24FD8A800001DA63 /* ApiDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC76B9B24FD8A800001DA63 /* ApiDataViewController.swift */; };
 		BEC76B9E24FD9C030001DA63 /* Apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC76B9D24FD9C030001DA63 /* Apod.swift */; };
@@ -16,7 +18,6 @@
 		D776808925028F8900D53695 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D776808825028F8900D53695 /* backgroundMusic.mp3 */; };
 		D776808D250290B700D53695 /* principalBackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D776808C250290B700D53695 /* principalBackgroundMusic.mp3 */; };
 		D776808F2502912A00D53695 /* proximityBackground.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D776808E2502912A00D53695 /* proximityBackground.mp3 */; };
-		D7768091250292A600D53695 /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D7768090250292A600D53695 /* hit.mp3 */; };
 		D7DD24BB24F971BB00BF5E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD24BA24F971BB00BF5E3D /* AppDelegate.swift */; };
 		D7DD24BD24F971BB00BF5E3D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D7DD24BC24F971BB00BF5E3D /* GameScene.sks */; };
 		D7DD24BF24F971BB00BF5E3D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D7DD24BE24F971BB00BF5E3D /* Actions.sks */; };
@@ -29,15 +30,16 @@
 
 /* Begin PBXFileReference section */
 		BE10F9E824FEF56000E96C6C /* ProximityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximityViewController.swift; sourceTree = "<group>"; };
+		BE881339250297BB000080CC /* impact.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = impact.mp3; sourceTree = "<group>"; };
 		BEC76B9924FD89A10001DA63 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		BEC76B9B24FD8A800001DA63 /* ApiDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataViewController.swift; sourceTree = "<group>"; };
 		BEC76B9D24FD9C030001DA63 /* Apod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apod.swift; sourceTree = "<group>"; };
 		BEC76BA024FD9DAC0001DA63 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D77680802502877200D53695 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
-		D776808825028F8900D53695 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = backgroundMusic.mp3; path = ../../../Downloads/backgroundMusic.mp3; sourceTree = "<group>"; };
+		D776808825028F8900D53695 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		D776808C250290B700D53695 /* principalBackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = principalBackgroundMusic.mp3; sourceTree = "<group>"; };
 		D776808E2502912A00D53695 /* proximityBackground.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = proximityBackground.mp3; sourceTree = "<group>"; };
-		D7768090250292A600D53695 /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hit.mp3; path = ../../../Downloads/hit.mp3; sourceTree = "<group>"; };
+		D7768090250292A600D53695 /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
 		D7DD24B724F971BB00BF5E3D /* Espasurdo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Espasurdo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DD24BA24F971BB00BF5E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7DD24BC24F971BB00BF5E3D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				D776808825028F8900D53695 /* backgroundMusic.mp3 */,
 				D776808C250290B700D53695 /* principalBackgroundMusic.mp3 */,
 				D776808E2502912A00D53695 /* proximityBackground.mp3 */,
+				BE881339250297BB000080CC /* impact.mp3 */,
 				D7DD24BC24F971BB00BF5E3D /* GameScene.sks */,
 				D7768090250292A600D53695 /* hit.mp3 */,
 				D7DD24C024F971BB00BF5E3D /* GameScene.swift */,
@@ -170,7 +173,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7768091250292A600D53695 /* hit.mp3 in Resources */,
+				BE88133A250297BB000080CC /* impact.mp3 in Resources */,
+				BE88133825029658000080CC /* hit.mp3 in Resources */,
 				D7DD24C624F971BB00BF5E3D /* Main.storyboard in Resources */,
 				D776808925028F8900D53695 /* backgroundMusic.mp3 in Resources */,
 				D776808F2502912A00D53695 /* proximityBackground.mp3 in Resources */,
@@ -341,7 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28CMR6C7AZ;
+				DEVELOPMENT_TEAM = 23WSBM7T82;
 				INFOPLIST_FILE = Espasurdo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,7 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28CMR6C7AZ;
+				DEVELOPMENT_TEAM = 23WSBM7T82;
 				INFOPLIST_FILE = Espasurdo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
