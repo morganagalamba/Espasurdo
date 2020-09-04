@@ -18,6 +18,7 @@ class GameViewController: UIViewController {
 
     var timer = Timer()
     let nextViewController = ProximityViewController()
+    var timerMusic = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,15 +92,13 @@ class GameViewController: UIViewController {
             //self.show(self.nextViewController, sender: nil)
             //self.navigationController?.
             //show(self.nextViewController, sender: nil)
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let nextVC = storyboard.instantiateViewController(identifier: "proximity") as! ProximityViewController
             
             //self.show(nextVC, sender: nil)
             
             //self.present(nextVC, animated: true, completion: nil)
+            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "impact")
             
-            self.navigationController?.pushViewController(nextVC, animated: true)
+            timerMusic = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.changeScreen), userInfo: nil, repeats: false)
         }
         
         if sceneNode?.hitEnd != false {
@@ -122,6 +121,15 @@ class GameViewController: UIViewController {
             //self.navigationController?.pushViewController(nextVC, animated: true)
         }
         
+    }
+    
+    @objc func changeScreen() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let nextVC = storyboard.instantiateViewController(identifier: "proximity") as! ProximityViewController
+        
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func restart(){

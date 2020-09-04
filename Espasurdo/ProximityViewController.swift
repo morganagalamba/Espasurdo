@@ -18,20 +18,13 @@ class ProximityViewController: UIViewController {
     var timer = Timer()
     var timeCounter = 500
     var sensorTimer = Timer()
-    var timerMusic = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "impact")
+        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "proximityBackground")
         counterLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         
-        timerMusic = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.changeMusic), userInfo: nil, repeats: false)
-        
-    }
-    
-    @objc func changeMusic() {
-        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "proximityBackground")
     }
 
     @IBAction func startTapped(_ sender: Any) {
